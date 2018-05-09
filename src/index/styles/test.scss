@@ -1,4 +1,39 @@
-h1 {
-  background-image: url('../../assets/images/about.png');// пример использования картинок, путь указывается относительно src/index/index.scss, рутового файла стилей
-  background-color: red;
+
+
+.navtop{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: $navtop-font-size;
+  color: $navtop-font-color;
+  background-color: $navtop-bg-color;
+  padding: 0.2rem;
+  &-call{
+    display: flex;
+    padding-left: 2rem;
+    align-items: center;
+    justify-content: space-between;
+
+    &-logo{
+        padding-right: 1rem;
+      }
+
+  }
+}
+
+.navtop-bar-menu{
+  display: flex;
+  padding-right: 1.3rem;
+  &-item {
+    text-transform: uppercase;
+    padding: 0.4rem;
+  }
+}
+
+.navtop-bar-menu-item:not(:last-child){
+  //content: '';
+  //display: table;
+  //height: 5px;
+  //width: 1px;
+  border-right: 1px solid black;
 }

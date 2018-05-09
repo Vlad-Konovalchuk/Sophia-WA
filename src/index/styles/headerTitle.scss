@@ -1,0 +1,37 @@
+.header-title{
+  color:$header-title-nav-font-color ;
+  font-size: $header-title-nav-font-size;
+}
+
+.header-title{
+@include flex-j-sb;
+  margin: 1.5rem;
+  &-text{
+    font-size: 4.5rem;
+  }
+}
+
+.header-title-nav-menu{
+  @include flex-center;
+  &-item{
+    padding: 1rem;
+  }
+}
+
+.header_title_social{
+@include flex-center;
+  padding-right: 3rem;
+  a{
+    padding: 0.5rem;
+  }
+  &-choice{
+-webkit-appearance: none;
+    width: 100px;
+    height: 26px;
+    border-radius: 10px;
+    &-menu{ border: none;
+      background-color: #000000;
+      padding: 1rem;}
+
+  }
+}
