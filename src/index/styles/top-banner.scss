@@ -1,18 +1,22 @@
 .top-banner{
   width: 100%;
-  height: 100%;
+  height: auto;
   min-height: 692px;
   background-image: url("../../assets/images/slider-img.jpg") ;
   background-size: cover;
+  background-attachment:scroll;;
+  background-position:center center;
+  background-repeat: no-repeat;
   position: relative;
+  margin: 0 auto;
   &:before{
     content: '';
     display: block;
     border-left: 200px solid transparent;
     border-right: 200px solid transparent;
-    border-top: 100px solid $white;
+    border-top: 65px solid $white;
     position: absolute;
-    left: 55%;
+    left: 53%;
     transform: translate(-59%);
   }
 }
@@ -20,7 +24,6 @@
 //--------------------------------Top Banner Content---------------------------
 .wrapper{
   border:2px solid $white;
-  //padding: 1.2rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -30,23 +33,30 @@
 }
 .top-banner_content{
   width: 100%;
+  max-width: 273px;
+  max-height: 273px;
   height: 100%;
   border:1px solid $grey;
-  padding: 3rem;
+  padding: 0.875rem 2.5rem;
   display: flex;
   flex-direction: column;
-  align-content: space-between;
-  & span:nth-child(odd){
-    color: $white;
-  }
-  & span:nth-child(even){
-    color: $black;
-  }
+  justify-content: center;
+  align-content: center;
+  font-family: $top-banner-content-ff;
   span{
     display: block;
     text-transform: uppercase;
     text-align: center;
+    padding: 0.4rem 0;
   }
+  & span:nth-child(odd){
+    color: $white;
+
+  }
+  & span:nth-child(even){
+    color: $black;
+  }
+
   @each $font-siz in $top-banner-content {
     $i: index($top-banner-content, $font-siz);
     .content-#{$i} {
@@ -54,3 +64,49 @@
     }
   }
 }
+
+.top-banner_btn{
+  position: absolute;
+  bottom: 15%;
+  left: 52%;
+  @include position-center;
+  padding: 0.5rem 1.5rem;
+
+  &.btn{
+    font-size: $btn-font-size;
+    background-color: $btn-color-bg;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    font-family: $btn-ff;
+
+  }
+  .btn_link{
+    color: $white;
+    &:hover{
+     background-color:linear-gradient(to top right, #ee82ee, #ff0000);
+    }
+  }
+}
+
+.slider-controls{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-30%);
+  display: flex;
+  cursor: pointer;
+  color: $slider-control-color;
+  padding: 0.4rem;
+  font-size: 1.5rem;
+  .slider-control{
+    transform: scale(1);
+    padding: 0.2rem;
+    transition: transform 0.5s;
+    &:hover{
+      transform:scale(2);
+    }
+  }
+
+}
+
