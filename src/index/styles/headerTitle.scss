@@ -1,37 +1,74 @@
+
+//Section with nav, head-title of site, social icons, exchange
 .header-title{
   color:$header-title-nav-font-color ;
   font-size: $header-title-nav-font-size;
 }
 
 .header-title{
-@include flex-j-sb;
-  margin: 1.5rem;
+@include flex-center;
+  padding: 1.2rem;
+  &-nav{
+    flex:1;
+  }
   &-text{
     font-size: 4.5rem;
+    flex: 1;
+    margin: 0 auto;
+    text-align: center;
+    font-family: $site-title-ff,Arial,sans-serif;
   }
 }
 
 .header-title-nav-menu{
-  @include flex-center;
+  display: flex;
+  align-items: center;
   &-item{
     padding: 1rem;
+    padding-right: 0;
+    font-family: "PlayfairDisplay Regular", serif;
   }
 }
-
-.header_title_social{
-@include flex-center;
-  padding-right: 3rem;
-  a{
-    padding: 0.5rem;
+//Social icons and Dropdown menu
+.header-title-social {
+  @include  flex-j-fe;
+  flex: 1;
+  align-items: center;
+  position: relative;
+  &_icons {
+    display: flex;
+    margin-right: 1rem;
   }
-  &-choice{
--webkit-appearance: none;
-    width: 100px;
-    height: 26px;
-    border-radius: 10px;
-    &-menu{ border: none;
-      background-color: #000000;
-      padding: 1rem;}
+  a {
+    padding: 0.4rem;
 
   }
+  &_dropdown{
+    text-transform: uppercase;
+    background-color: $black;
+    color: $white;
+    padding: $dropdown-padding;
+    border-radius: 10%;
+    cursor: pointer;
+    font-size: $dropdown-fontsize;
+    font-family: "Lato Bold", Arial,sans-serif;
+    margin: 0 1rem;
+    &.opened{
+      .dropdown_options{
+        transform: scale(1);
+        //display: block;
+        }
+      }
+    .dropdown_options{
+      transform:scale(0);
+      display: none;
+      transform-origin: top;
+      transition: 0.5s;
+      }
+
+  }
+
+
+
+
 }

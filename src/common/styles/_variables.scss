@@ -1,6 +1,18 @@
-$navtop-font-size: 11px;;
+//Common variables------------------------------------
+$white: #ffffff;
+$black: rgba(4, 4, 4, 0.86);
+$grey: rgb(203, 203, 203);
+//---------------------------Test variables---------------------
+$navtop-font-size: 11px;
 $navtop-font-color: #393939;
 $navtop-bg-color: #f2f2f2;
-
+// -------------------------Test variables ENDS--------------------
+//--------------------------headerTitile variables-----------------
+$site-title-ff:"KrinkesDecor";
+$dropdown-padding: 0.5rem;
+$dropdown-fontsize:12px;
 $header-title-nav-font-color: #000000;
 $header-title-nav-font-size: 18px;
+//-----------------------headerTitile variables ends-------------------
+//-----------------------Top Banner-------------------------------
+$top-banner-content: 19px 59px  20px  31px;

@@ -26,14 +26,20 @@
   padding-right: 1.3rem;
   &-item {
     text-transform: uppercase;
-    padding: 0.4rem;
+    padding: 0.8rem;
+    padding-right: 1.4rem;
+    position: relative;
   }
 }
 
-.navtop-bar-menu-item:not(:last-child){
-  //content: '';
-  //display: table;
-  //height: 5px;
-  //width: 1px;
-  border-right: 1px solid black;
+.navtop-bar-menu-item:not(:last-child) .navtop-bar-menu-item-link:after{
+  content: "|";
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 1px;
+  top: 30%;
+  right: 2%;
 }
+
+

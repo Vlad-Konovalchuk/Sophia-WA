@@ -12,9 +12,12 @@ a{
 li,ul{
 	text-decoration: none;
 	list-style-type: none;
+	margin: 0;
+	padding: 0;
 }
 
 .container{
 	max-width: 1440px;
+	margin: 0 auto;
 
 }

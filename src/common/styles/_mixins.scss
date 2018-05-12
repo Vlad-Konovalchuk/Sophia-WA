@@ -7,17 +7,19 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-}@mixin flex-j-sb{
+}@mixin flex-j-sb {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}@mixin flex-center{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}@mixin flex-center{
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-
+@mixin flex-j-fe{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+// @mixin flex-center{
+//  display: flex;
+//  align-items: center;
+//  justify-content: center;
+//}
+//

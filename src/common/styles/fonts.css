@@ -1,0 +1,109 @@
+/*// Lato Fonts*!*!*/
+@font-face {
+  font-family: "Lato Black";
+  src: url('../../../assets/fonts/Lato/Lato-Black.ttf');
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Lato-Black Italic";
+  src: url("../../../assets/fonts/Lato/Lato-BlackItalic.ttf") ;
+  font-style: italic;
+  font-weight: 900;
+
+}
+@font-face {
+  font-family: "Lato Bold";
+  src: url("../../../assets/fonts/Lato/Lato-Bold.ttf");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Lato Bold Italic";
+  src: url("../../../assets/fonts/Lato/Lato-BoldItalic.ttf");
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Lato Hairline";
+  src: url("../../../assets/fonts/Lato/Lato-Hairline.ttf");
+  font-weight: 100;
+
+}
+@font-face {
+  font-family: "Lato Hairline Italic";
+  src: url("../../../assets/fonts/Lato/Lato-HairlineItalic.ttf");
+  font-style: italic;
+  font-weight: 100;
+
+
+}
+@font-face {
+  font-family:" Lato Italic";
+  src: url("../../../assets/fonts/Lato/Lato-Italic.ttf");
+  font-style: italic;
+
+}
+@font-face {
+  font-family: "Lato Light";
+  src: url("../../../assets/fonts/Lato/Lato-Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Lato Light Italic";
+  src: url("../../../assets/fonts/Lato/Lato-LightItalic.ttf");
+  font-style: italic;
+  font-weight: 300;
+
+}
+@font-face {
+  font-family: "Lato Regular";
+  src: url("../../../assets/fonts/Lato/Lato-Regular.ttf");
+  font-weight: 400;
+}
+
+/*// PlayfairDisplay Fonts*!*!*/
+
+@font-face {
+  font-family: "Playfair Display Black";
+  src: url("../../../assets/fonts/Playfair_Display/PlayfairDisplay-Black.ttf");
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Playfair Display-Black Italic";
+  src: url("../../../assets/fonts/Playfair_Display/PlayfairDisplay-BlackItalic.ttf");
+  font-style: italic;
+  font-weight: 900;
+
+}
+@font-face {
+  font-family: "Playfair Display Bold";
+  src: url("../../../assets/fonts/Playfair_Display/PlayfairDisplay-Bold.ttf") ;
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Playfair Display Bold Italic";
+  src: url("../../../assets/fonts/Playfair_Display/PlayfairDisplay-BoldItalic.ttf") ;
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+    font-family: "Playfair Display Italic";
+    src: url("../../../assets/fonts/Playfair_Display/PlayfairDisplay-Italic.ttf") ;
+    font-style: italic;
+}
+/*}*/
+@font-face {
+  font-family: "PlayfairDisplay Regular";
+  src: url("../../../assets/fonts/Playfair_Display/PlayfairDisplay-Regular.ttf") ;
+  font-weight: 400;
+}
+/*KrinkesDecor*/
+@font-face {
+  font-family: "KrinkesDecor";
+  src: url("../../../assets/fonts/KrinkesDecor/KrinkesDecorPERSONAL.ttf");
+  font-weight: 400;
+}@font-face {
+  font-family: "KrinkesDecor Regular";
+  src: url("../../../assets/fonts/KrinkesDecor/KrinkesRegularPERSONAL.ttf");
+  font-weight: 400;
+}
