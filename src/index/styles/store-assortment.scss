@@ -1,0 +1,298 @@
+.store-assortment {
+  max-width:1290px;
+  margin: 0 auto;
+}
+.store-assortment__title {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  &:before{
+    content: '';
+    width: 100%;
+    height:2px;
+    position: absolute;
+    background-color: $store-assortment-lineTop-color;
+    top: 46px;
+    z-index: -1;
+  }
+
+  .store-assortment__title-text{
+    font-size: $featured-title-fs;
+    font-family: $featured-title-ff;
+    position: relative;
+    z-index: 3;
+    background-color: $white;
+    &:before{
+      content: "⬥";
+      color:$brule;
+      margin:0 3rem 0 2.5rem;
+    }
+    &:after{
+      content: "⬥";
+      color:$brule;
+      margin:0 3rem 0 2.5rem;
+    }
+  }
+
+}
+
+//-----------------------HandPicked---------------------------------
+.store-assortment__featured {
+
+}
+.store-assortment__items {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(2,1fr);
+  grid-template-areas:
+  "shoes women strap"
+  "bracelet women card";
+  grid-gap: 1rem;
+
+  .store-assortment__item{
+  outline:3px solid $white;
+  outline-offset:-23px;
+  position: relative;
+    .store-assortment__item-hidden{
+      display: block;
+      background-color: rgba(0%, 0%, 0%, .3);;
+      width: 80%;
+      height: 80%;
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%,-15%);
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s, opacity 0.5s linear;
+    }
+    &:hover .store-assortment__item-hidden{
+      visibility: visible;
+      opacity: 1;
+      .btn{
+        @include btn-style;
+        opacity: 1;
+        padding: 0.5rem;
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    .item-link-image{
+      width: 100%;
+      height: auto;
+      min-height: 100%;
+    }
+  }
+  .shoes{
+    //background: url("../../assets/images/featured-shoes.jpg");
+    //background-size: 100%;
+    //background-position: 100% 100%;
+    grid-area: shoes;
+  }
+  .bracelet{
+    //background: url("../../assets/images/featured-bracelet.jpg");
+    //background-size: cover;
+    //background-position: 100% 50%;
+    grid-area: bracelet;
+
+  }
+  .women{
+    //background: url("../../assets/images/featured-women.jpg");
+    //background-size: cover;
+    //background-position: 100% 100%;
+    grid-area: women;
+  }
+  .strap{
+    //background: url("../../assets/images/featured-strap.jpg");
+    //background-size: cover;
+    //background-position: 100% 50%;
+    grid-area: strap;
+
+  }
+  .card-holder{
+    //background: url("../../assets/images/featured-card-holder.jpg");
+    //background-size: cover;
+    //background-position: 100% 50%;
+    grid-area: card;
+  }
+}
+//-----------------------Summer Collection---------------------------
+.store-assortment__sum-collection {
+
+}
+
+.sum-collection__products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  align-content: stretch;
+  border: 1px solid #eaeaea;
+  margin: 0 auto;
+  .item{
+    padding: 10px 0;
+    position: relative;
+    min-height: 345px;
+    //&__logo-img{
+    //  //width: 100%;
+    //  //height: 100%;
+    //  //object-fit: cover;
+    //  //object-position: 50% 50%
+    //}
+  }
+}
+
+.sale {
+  position: absolute;
+  left:0.8125rem;
+  top: 1.0625rem;
+  max-width: 3.75rem;
+  max-height: 3.8125rem;
+  border-radius: 50%;
+  padding: 1rem 0.5rem;
+  background-color:$sale-bgc;
+  color:$sale-font-color;
+  font-size:$sale-font-size;
+  font-family:$sale-content-ff;
+
+  &__content{
+    text-align: center;
+    margin: 0 auto;
+  }
+
+}
+.item__buy {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  @include position-center-bottom-left(50%,-3%);
+  &:hover .products-card__btn:after {
+    border-bottom-color: $sale-bgc;
+    }
+  .products-card__btn{
+    @include btn-style;
+    width: 198px;
+    line-height: 0.5rem;
+    background-color: transparent;
+    color: $white;
+    padding: 1.1rem;
+    z-index: 3;
+    &:after{
+      content: "";
+      border-bottom: 46px solid #000000;
+      border-left: 40px solid transparent;
+      border-right: 40px solid transparent;
+      height: 0;
+      line-height: 100%;
+      position: absolute;
+      left: 6px;
+      bottom: 4px;
+      z-index: -1;
+      width: 119px;
+    }
+
+  }
+}
+//------------------------------Brands---------------------------
+.store-assortment__brands {
+  margin-top:7.25rem;
+  margin-bottom: 8.75rem;
+
+}
+.brands-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin:8.75rem 3.125rem;
+  flex: 0 1 16.666666666666668%;
+
+  &__item{
+    flex: 0 1 16.666666666666668%;
+    &:not(:last-of-type){
+      padding-right: 4rem;
+    }
+  }
+  .list__item-logo img{
+    width: 100%;
+  }
+}
+//-------------------------------Brands Ends---------------------------
+
+//-------------------------------Reviews-----------------------------------
+.reviews {
+  min-height: 400px;
+  .store-assortment__title{
+    max-width: 1290px;
+    margin: 0 auto;
+  }
+
+}
+
+.reviews__items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+  background-color: $review-bgc;
+  max-width: $body-width;
+  margin: 4rem 0 0 0;
+  padding-top: 2.25rem;
+  &::before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 53%;
+    top: 0;
+    transform: translate(-59%);
+    border-left:9.375rem solid transparent;
+    border-right:9.375rem solid transparent;
+    border-top: 1.875rem solid #ffffff;
+  }
+  &__img {
+    width: 100%;
+  }
+
+}
+
+.review {
+  display: flex;
+  position: relative;
+
+  &__content{
+      padding-top: 6rem;
+  }
+
+  &__title {
+    color: $review-title-color;
+    font-size: $review-title-fsz;
+    font-family: $review-title-ff;
+    line-height: 1.0625rem;
+  }
+  &__subtitle {
+    color: $review-subtitle-color;
+    font-size: $review-subtitle-fsz;
+    font-family: $review-subtitle-ff;
+    text-transform: uppercase;
+    line-height: 1.8125rem;
+  }
+  &__text {
+    color: $review-content-color;
+    font-size: $review-content-fsz;
+    font-family: $review-content-ff;
+    line-height: 1.875rem;
+  }
+
+}
+.reviews__item-right {
+  .review__content{
+    text-align: right;
+  }
+}
+
+
+
+
+//-------------------------------Reviews Ends-------------------------------
+

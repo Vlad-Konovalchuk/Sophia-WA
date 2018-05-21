@@ -11,33 +11,31 @@
     font-family: $support-title-ff;
     display: block;
     text-transform: uppercase;
-  }&_text{
+    }
+  &_text{
     font-size: $support-text-fsz;
     font-family: $support-text-ff;
     display: block;
     text-transform: capitalize;
-
      }
   &>*{
     background-color:$bg-color-1;
     padding: 0.8rem;
     padding-right: 1.1rem;
-    //margin: 0.7rem;
     position: relative;
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     min-height: 100px;
-  }
+    }
   &__returns {
     background-color: $black;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    //flex: 3;
-  }
+    }
 
 }
 .image{
@@ -46,8 +44,12 @@
 .support__shipping{
   display: flex;
   clip-path: polygon(0% 0%,50% 0%,65% 0, 85% 0%,95% 50%,85% 100%,0% 100%);
-
-
+  .shipping__image{
+    margin-left: 1.5rem;
+  }
+  .shipping__content{
+    margin-left:1.8rem;
+  }
 }
 .support__returns{
   margin-left:-35px;

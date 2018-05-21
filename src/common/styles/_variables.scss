@@ -1,7 +1,11 @@
 //Common variables------------------------------------
 $white: #ffffff;
-$black: rgba(4, 4, 4, 0.86);
+$black: #000000;
+$black-light: rgba(4, 4, 4, 0.86);
 $grey: rgb(203, 203, 203);
+$brule:#d9bf8f;
+$dark-grey: rgba(0, 0, 0, 0.69);
+$body-width:1440px;
 //---------------------------Test variables---------------------
 $navtop-font-size:0.6875rem;
 $navtop-font-color: #393939;
@@ -29,5 +33,69 @@ $support-title-ff:"Lato Bold",Arial,sans-serif;
 $support-title-fsz:1.875rem;
 $support-text-ff:"Lato Regular",Arial,sans-serif;
 $support-text-fsz:0.875rem;
+//-----------------------Store-Assortment-------------------------------
+//-----------------------featured---------------------------------------
+$featured-title-fs:1.875rem;
+$featured-title-ff:"Playfair Display Bold Italic",Arial,sans-serif;
+$store-assortment-lineTop-color:#eaeaea;
+//-----------------------Featured Ends----------------------------------
+//-----------------------Summer Collection----------------------------------
+
+$sale-bgc:#feab12;
+$sale-font-color:#ffffff;
+$sale-font-size:1.4375rem;
+$sale-content-ff:"Lato Bold",Arial,sans-serif;
+
+//-----------------------Summer Collection Ends----------------------------------
+//-----------------------Reviews--------------------------------
+$review-bgc:#d9bf8f;
+
+$review-title-fsz:1.875rem;
+$review-title-ff:"Playfair Display Bold Italic", Arial, sans-serif;
+$review-title-color:#000000;
+
+$review-subtitle-fsz:0.875rem;
+$review-subtitle-ff:"Lato Bold", Arial, sans-serif;
+$review-subtitle-color:#7f7e7e;
+
+$review-content-fsz:1.125rem;
+$review-content-ff:"Playfair Display Italic", Arial, sans-serif;
+$review-content-color:#ffffff;
+//--------------------------Reviews Ends---------------------
+//--------------------------Footer------------------------------
+$footer-bgc:#141414;
+$footer-line-height:1.875rem;
+$footershop-title-color:#ffffff;
+$footershop-title-fsz:1rem;
+$footershop-title-ff:"Lato Bold", Arial, sans-serif;
+$footershop-text-color:#737373;
+$footershop-text-fsz:0.875rem;
+$footershop-text-ff:"Lato Regular",Arial,sans-serif;
+//Footer Contacts-------
+$contacts-line-height:1.875rem;
+$contacts-fsz:1rem;
+$contacts-color:#ffffff;
+
+$contacts-text-ff:"Lato Bold", Arial, sans-serif;
+$contacts-text-small-ff:"Playfair Display Italic", Arial, sans-serif;
+
+//Footer Subscribe Form---
+$subscribe-form-ff:"Lato Regular",Arial,sans-serif;
+$subscribe-form-lineheight:1.875rem;
+$subscribe-form-border:#484848;
+$subscribe-form-bgc:#141414;
+$search-input-color:#6a6a6a;
+$search-input-fsz:0.75rem;
+$search-btn:#ffffff;
+$search-btn-bgc:#6a6a6a;
+$search-btn-color:#ffffff;
+
+
+//Footer Copyright----
+
+$footer-copyright-color:#363636;
+$footer-copyright-fsz:11px;
+$footer-copyright-line-height:18px;
+$footer-copyright-ff:"Lato Regular",Arial,sans-serif;
 
 

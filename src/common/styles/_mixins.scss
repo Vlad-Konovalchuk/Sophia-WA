@@ -17,6 +17,43 @@
   align-items: center;
   justify-content: flex-end;
 }
+//-----------------------------Position----------------------
 @mixin position-center{
   transform: translate(-50%,-50%);
+}
+@mixin position-center-top-left($left, $top){
+  left: $left ;
+  top: $top;
+  position: absolute;
+  transform: translate(-50%,-50%);
+}
+@mixin position-center-bottom-left($left, $bottom){
+  left: $left;
+  bottom:$bottom ;
+  position: absolute;
+  transform: translate(-50%,-50%);
+}
+@mixin position-center-bottom-right($right,$bottom){
+  right: $right;
+  bottom:$bottom ;
+  position: absolute;
+  transform: translate(-50%,-50%);
+}
+@mixin position-center-top-right($right, $top){
+  right: $right ;
+  top: $top;
+  position: absolute;
+  transform: translate(-50%,-50%);
+}
+
+//---------------------------------------------BTN======================
+@mixin btn-style{
+  font-size:0.875rem;
+  color: $white;
+  background-color: $btn-color-bg;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  font-family: $btn-ff;
+  transition:all 1s linear;
 }
