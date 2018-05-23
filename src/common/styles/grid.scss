@@ -1,10 +1,18 @@
-@media screen and (max-width: 1142px){
+@media screen and (max-width: 1220px){
   .brands-list{
     flex-wrap: wrap;
     justify-content: center;
-    //flex-basis: 33.333333333333336%;
+    flex: 0 1 33.333333333333336%;
     &__item{
       padding: 1rem;
     }
   }
+  .store-assortment__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "shoes bracelet " "women  strap" "women  card";
+    grid-gap: 0.6rem;
+  }
+
 }

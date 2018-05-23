@@ -1,14 +1,14 @@
 .footer{
   background-color: $footer-bgc;
   padding-top: 4.1875rem;
+  position: relative;
 }
 
 .footer__container {
   line-height: $footer-line-height;
   display: flex;
   justify-content: space-around;
-  border-bottom: 2px solid white;
-
+  position: relative;
   .footer__title {
     text-transform: uppercase;
     font-size: $footershop-title-fsz;
@@ -29,7 +29,15 @@
   }
 
   &:after{
-
+    content: '';
+    display: block;
+    min-width: 1290px;
+    min-height: 2px;
+    background-color: #363636;
+    position: absolute;
+    bottom: 0;
+    left: 51%;
+    transform: translateX(-50%);
   }
 }
 
@@ -101,7 +109,7 @@
 
 
 .copyright{
-  padding: 25px 0 50px 73px ;
+  padding: 25px 0 50px 90px ;
   &__text{
     text-transform: capitalize;
     font-size: $footer-copyright-fsz;
@@ -115,4 +123,20 @@
       padding: 0.5rem;
     }
   }
+}
+
+
+.to-top{
+  width: 40px;
+  height: 40px;
+  background-color: #090909;
+  color: white;
+  position: absolute;
+  bottom:16%;
+  right: 10%;
+  border-radius: 10%;
+  &__image{
+  @include position-center-top-left(50%, 50%);
+  }
+
 }

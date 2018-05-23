@@ -1,6 +1,6 @@
 .store-assortment {
-  max-width:1290px;
-  margin: 0 auto;
+  max-width:1390px;
+  margin: 2rem 1.5rem;
 }
 .store-assortment__title {
   display: flex;
@@ -37,9 +37,7 @@
 }
 
 //-----------------------HandPicked---------------------------------
-.store-assortment__featured {
 
-}
 .store-assortment__items {
   display: grid;
   grid-template-columns: repeat(3,1fr);
@@ -64,7 +62,7 @@
       transform: translate(-50%,-15%);
       visibility: hidden;
       opacity: 0;
-      transition: visibility 0s, opacity 0.5s linear;
+      transition: visibility 0s, opacity 0.2s ease;
     }
     &:hover .store-assortment__item-hidden{
       visibility: visible;
@@ -86,42 +84,24 @@
     }
   }
   .shoes{
-    //background: url("../../assets/images/featured-shoes.jpg");
-    //background-size: 100%;
-    //background-position: 100% 100%;
     grid-area: shoes;
   }
   .bracelet{
-    //background: url("../../assets/images/featured-bracelet.jpg");
-    //background-size: cover;
-    //background-position: 100% 50%;
     grid-area: bracelet;
 
   }
   .women{
-    //background: url("../../assets/images/featured-women.jpg");
-    //background-size: cover;
-    //background-position: 100% 100%;
     grid-area: women;
   }
   .strap{
-    //background: url("../../assets/images/featured-strap.jpg");
-    //background-size: cover;
-    //background-position: 100% 50%;
     grid-area: strap;
 
   }
   .card-holder{
-    //background: url("../../assets/images/featured-card-holder.jpg");
-    //background-size: cover;
-    //background-position: 100% 50%;
     grid-area: card;
   }
 }
 //-----------------------Summer Collection---------------------------
-.store-assortment__sum-collection {
-
-}
 
 .sum-collection__products {
   display: flex;
@@ -163,6 +143,7 @@
   }
 
 }
+
 .item__buy {
   position: relative;
   display: flex;
@@ -201,6 +182,7 @@
   margin-bottom: 8.75rem;
 
 }
+
 .brands-list {
   display: flex;
   justify-content: space-around;

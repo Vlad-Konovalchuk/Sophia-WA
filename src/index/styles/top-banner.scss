@@ -4,7 +4,7 @@
   height: auto;
   min-height: 692px;
   background-image: url("../../assets/images/slider-img.jpg") ;
-  background-size: cover;
+  background-size: contain;
   background-attachment:scroll;;
   background-position:center center;
   background-repeat: no-repeat;
@@ -44,17 +44,17 @@
   justify-content: center;
   align-content: center;
   font-family: $top-banner-content-ff;
-  span{
+  .content{
     display: block;
     text-transform: uppercase;
     text-align: center;
     padding: 0.4rem 0;
   }
-  & span:nth-child(odd){
+  & .content:nth-child(odd){
     color: $white;
 
   }
-  & span:nth-child(even){
+  & .content:nth-child(even){
     color: $black;
   }
 
@@ -64,7 +64,64 @@
       font-size: $font-siz;
     }
   }
+
 }
+
+.content-3{
+  &__left{
+    position: relative;
+    &::before{
+      content: "";
+      position: absolute;
+      bottom: 8px;
+      left: -90%;
+      transform: translateX(-70%);
+      width: 60px;
+      height: 1px;
+      background: #fcfcfc;
+
+      }
+    &::after{
+      content: "";
+      position: absolute;
+      bottom: 50%;
+      left: -57%;
+      transform: translateX(-70%);
+      width: 34px;
+      height: 1px;
+      background: #e0e0e0;
+    }
+  }&__right{
+    position: relative;
+    &::before{
+      content: "";
+      position: absolute;
+      bottom: 8px;
+      right: -90%;
+      transform: translateX(70%);
+      width: 60px;
+      height: 1px;
+      background: #fcfcfc;
+
+      }
+    &::after{
+      content: "";
+      position: absolute;
+      bottom: 50%;
+      right: -58%;
+      transform: translateX(70%);
+      width: 34px;
+      height: 1px;
+      background: #e0e0e0;
+    }
+  }
+
+}
+
+
+
+
+
 
 .top-banner_btn{
   position: absolute;
@@ -93,7 +150,7 @@
 
 .slider-controls{
   position: absolute;
-  bottom: 0;
+  bottom: 5%;
   left: 50%;
   transform: translateX(-30%);
   display: flex;
