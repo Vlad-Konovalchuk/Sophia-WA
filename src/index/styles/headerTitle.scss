@@ -8,10 +8,10 @@
 .header-title{
 @include flex-center;
   padding: 1.2rem;
-  &-nav{
+  &__nav{
     flex:1;
   }
-  &-text{
+  &__text{
     font-size: 4.5rem;
     flex: 1;
     margin: 0 auto;
@@ -19,16 +19,29 @@
     font-family: $site-title-ff,Arial,sans-serif;
   }
 }
-
-.header-title-nav-menu{
-  display: flex;
-  align-items: center;
-  &-item{
+.nav{
+  &__burger{
+    display: none;
+  }
+  &__menu{
+    display: flex;
+    align-items: center;
+  }
+  &__item{
     padding: 1rem;
     padding-right: 0;
     font-family: "PlayfairDisplay Regular", serif;
   }
 }
+
+
+
+
+
+
+
+
+
 //Social icons and Dropdown menu
 .social {
   @include  flex-j-fe;
@@ -57,6 +70,7 @@
       width: 101px;
       text-align: center;
       position: relative;
+      outline: none;
       &:before {
         content: "";
         position: absolute;
@@ -97,7 +111,7 @@
         transform:translateX(-50%);
         }
        &:hover::after {
-         width: 100%;
+         width: 80%;
         }
     }
     &.opened {

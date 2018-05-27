@@ -1,8 +1,10 @@
+
 @media screen and (max-width: 1220px){
   .brands-list{
     flex-wrap: wrap;
     justify-content: center;
     flex: 0 1 33.333333333333336%;
+    margin: 4.75rem 3.125rem;
     &__item{
       padding: 1rem;
     }
@@ -15,4 +17,477 @@
     grid-gap: 0.6rem;
   }
 
+  .wrapper {
+    top: 40%;
+    left: 50%;
+    transform: translate(-48%, -50%);
+  }
+  .slider-controls {
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-40%);
+  }
+
+  .top-banner_btn {
+    bottom: 24%;
+    left: 51%;
+    transform: translateX(-51%);
+  }
 }
+
+@media screen and (max-width: 1190px){
+  .image{
+    padding-right: 0.9rem;
+  }
+  .support_title{
+    font-size: 1.8rem;
+  }
+  .support__shipping{
+    display: flex;
+    clip-path: polygon(0% 0%, 50% 0%, 65% 0, 85% 0%, 95% 50%, 85% 100%, 0% 100%);
+    .shipping__content{
+      margin-left:0;
+    }
+  }
+  .support__returns{
+    margin-left:-35px;
+    margin-right: -35px;
+    clip-path:polygon(0% 0%, 50% 0, 100% 0, 85% 0%,100% 0%,93% 50%,100% 100%, 0% 100%, 6% 50%, 0% 0% );
+    display: flex;
+    flex-direction: column;
+    .returns__content{
+      text-align: center;
+    }
+  }
+  .support__supporting{
+    display: flex;
+    justify-content: center;
+    clip-path: polygon(0% 0%, 50% 0, 100% 0, 100% 100%, 13% 100%, 5% 50%, 13% 0%);
+
+  }
+
+  .review {
+    display: flex;
+    justify-content: space-around;
+    flex-basis: 100%;
+
+  }
+
+  .reviews__item-right{
+    margin-left: auto;
+  }
+
+  .top-banner:before {
+    border-right: 150px solid transparent;
+    border-left: 155px solid transparent;
+    border-top: 42px solid #ffffff;
+    left: 52%;
+  }
+
+}
+
+@media screen and (max-width: 1030px) {
+  .wrapper {
+    top: 40%;
+    left: 50%;
+    transform: translate(-48%, -50%);
+    border: 5px solid #ffffff;
+  }
+  .top-banner_content{
+    border: 3px solid #cbcbcb;
+    &::before{
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: inherit;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      box-shadow: inset 0 0 0 200px rgba(255, 255, 255, 0.3);
+      filter: blur(6px);
+    }
+  }
+  .slider-controls {
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-40%);
+  }
+
+  .top-banner_btn {
+    bottom: 19%;
+    left: 51%;
+    transform: translateX(-51%);
+  }
+}
+
+@media screen and (max-width: 955px) {
+
+  //----------------------Repair margin right of Subscription Form in Footer----------------
+  .subscription {
+    margin-right: 0;
+  }
+
+  //--------------Flex Cloumns for Supports Blocks-------
+
+  .support {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    .sm-col-1 {
+      width: 85%;
+      clip-path: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin: 1rem;
+      letter-spacing: 2px;
+      .img{
+        padding-right: 1.5rem;
+      }
+    }
+    &__returns {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  //-----------------------Resize triangle before banner image----------------------
+  .top-banner:before {
+      border-left: 150px solid transparent;
+      border-right: 150px solid transparent;
+      border-top: 40px solid #ffffff;
+      top: -2%;
+      left: 53%;
+  }
+
+}
+
+@media screen and (max-width: 850px){
+  html{
+    font-size: 12px;
+  }
+  .top-banner:before {
+      border: none;
+  }
+
+  .slider-controls {
+    bottom: 1%;
+  }
+
+  .top-banner_btn {
+    bottom: 13%;
+  }
+  .top-banner_content{
+    padding: 0.2rem 1.2rem;
+
+    @each $font-siz in $top-banner-content-md {
+      $i: index($top-banner-content-md, $font-siz);
+      .content-#{$i} {
+        font-size: $font-siz;
+      }
+    }
+  }
+  .content-3__left::before{
+    left: -55%;
+    width: 41px;
+  }
+  .content-3__right::before{
+        right: -58%;
+        width: 41px;
+  }
+  .content-3__left::after{
+    left: -48%;
+    width: 24px;
+  }
+  .content-3__right::after{
+    right: -50%;
+    width: 24px;
+  }
+
+  .navtop {
+    width: 100%;
+    height: 50px;
+    position: relative;
+
+    &__burger{
+      display: block;
+      position: absolute;
+      top: 20%;
+      right: 25%;
+      cursor: pointer;
+    }
+
+    &-call {
+      display: none;
+    }
+    &-bar-menu {
+      display: block;
+      width: 100%;
+      height: 250px;
+      position: absolute;
+      z-index: 9;
+      top: 102%;
+      background-color: #000;
+      opacity: .9;
+      transform: scale(0);
+      transition: all 0.5s;
+      transform-origin: top;
+      &.active{
+        transform: scale(1);
+      }
+      &-item{
+        text-align: center;
+        padding: 1.2rem;
+        font-size: 1.3rem;
+        &-link{
+          color: $white;
+        }
+        &:active{
+          background-color: rgba(169, 168, 165, 0.94);
+        }
+      }
+      .navtop-bar-menu-item:not(:last-child)
+      .navtop-bar-menu-item-link:after{
+        content: '';
+      }
+    }
+  }
+
+
+  .nav {
+    width: 100%;
+    &__burger {
+      display: block;
+      position: absolute;
+      top: 10px;
+      left: 15px;
+      cursor: pointer;
+
+    }
+    &__menu {
+      display: block;
+      width: 100%;
+      height: 130%;
+      position: absolute;
+      background-color: #000;
+      opacity: .9;
+      z-index: 9;
+      text-align: center;
+      top: 50px;
+      left: 0;
+      font-size: 2.2rem;
+      transform: scale(0);
+      transition: all 0.5s;
+      transform-origin: top;
+      &.active{
+        transform: scale(1);
+      }
+    }
+    &__item{
+      padding: 2rem;
+      &:active{
+        background-color: rgba(169, 168, 165, 0.94);
+      }
+      &>a{
+        color: $white;
+      }
+
+    }
+
+  }
+
+  .header-title {
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+    position: initial;
+    .social__icons {
+      display: none;
+    }
+    &__text {
+      width: 100%;
+    }
+    &__social{
+      position: initial;
+    }
+    .dropdown{
+      position: absolute;
+      top: 1%;
+      right: -1%;
+      z-index: 10;
+    }
+  }
+
+  .header-title__text{
+    .text__content{
+      position: absolute;
+      z-index: 11;
+      top: -2px;
+      left: 38%;
+      font-size: 2.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 740px) {
+  html {
+    font-size: 11px;
+  }
+  .top-banner_content {
+    @each $font-siz in $top-banner-content-sm {
+      $i: index($top-banner-content-sm, $font-siz);
+      .content-#{$i} {
+        font-size: $font-siz;
+      }
+    }
+    .content {
+      padding: 0;
+    }
+  }
+
+  .slider-controls {
+    //bottom: -12%;
+    //.slider-control {
+    //  color: darken($slider-control-color, 30%);
+    //}
+    display: none;
+  }
+
+  .top-banner_btn {
+    bottom: 2%;
+    padding: 0.3rem 0.8rem;
+    &.btn {
+      font-size: 0.9rem;
+    }
+  }
+  .top-banner_content {
+    padding: 0.2rem 1.2rem;
+
+    @each $font-siz in $top-banner-content-md {
+      $i: index($top-banner-content-md, $font-siz);
+      .content-#{$i} {
+        font-size: $font-siz;
+      }
+    }
+  }
+
+  .header-title__text {
+    .text__content {
+      position: absolute;
+      z-index: 11;
+      top: 7px;
+      left: 27%;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+    }
+  }
+
+  .navtop__burger {
+    right: 36%;
+  }
+
+  .header-title {
+    .dropdown {
+      top: 3%;
+      right: -1%;
+    }
+  }
+
+  .support {
+    & > * {
+      min-height: auto;
+    }
+    .sm-col-1 {
+      margin: 0.4rem;
+      width: 95%;
+    }
+  }
+
+  .review {
+    &__title {
+      font-size: 1.6rem;
+      line-height: 2.2rem;
+    }
+    &__logo {
+      .img {
+        width: 100%;
+      }
+    }
+    &__content {
+      padding-top: 2rem;
+    }
+    .reviews__item-right {
+      .review__logo {
+        .img {
+          width: 50%;
+        }
+      }
+    }
+  }
+
+  .footer__container {
+    line-height: $footer-line-height;
+    flex-wrap: wrap;
+    .contacts{
+      padding-top: 1.4rem;
+      .footer__title{
+        text-align: center;
+      }
+      &__icons{
+        padding-top: 1.8rem;
+      }
+      .icon__logo{
+        padding: 0 0.5rem;
+      }
+      &__text{
+        text-align: center;
+      }
+      &__subscription{
+        margin-bottom: 0.8rem;
+      }
+    }
+    .footer__links {
+      padding: 0;
+    }
+    .links__text {
+      font-size: $footershop-text-fsz*1.5;
+      color: lighten($footershop-text-color, 20%);
+      padding: 0.3rem 0 0.3rem 0;
+    }
+  }
+
+  .footer{
+    .to-top{
+      bottom: 2%;
+    }
+  }
+
+}
+@media screen and (max-width: 380px){
+
+  .header-title {
+    .dropdown{
+      top: 2%;
+      right: -1%;
+    }
+  }
+  .navtop {
+    &__burger {
+      top: 27%;
+
+    }
+  }
+  .header-title__text{
+    .text__content{
+      top: 1%;
+      left: 18%;
+    }
+  }
+
+
+
+
+
+}
+

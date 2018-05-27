@@ -2,8 +2,7 @@ function dropDownMenu(el) {
     const Eltitle = el.querySelector('.dropdown__title');
     let stateDropDown = el.classList.contains('opened');
 
-    function close(text) {
-        Eltitle.textContent = text;
+    function close() {
         stateDropDown = false;
         el.classList.remove('opened');
         document.removeEventListener('click', close);
