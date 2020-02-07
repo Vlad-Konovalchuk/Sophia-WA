@@ -286,11 +286,16 @@
     }
     &__item{
       padding: 2rem;
-      &:active{
+      &:active,
+      &:hover{
         background-color: rgba(169, 168, 165, 0.94);
       }
-      &>a{
+      & > a{
         color: $white;
+        &:active,
+        &:hover{
+          background-color: rgba(169, 168, 165, 0.94);
+        }
       }
 
     }

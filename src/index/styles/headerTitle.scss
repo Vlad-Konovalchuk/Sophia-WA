@@ -1,53 +1,65 @@
-
 //Section with nav, head-title of site, social icons, exchange
-.header-title{
-  color:$header-title-nav-font-color ;
+.header-title {
+  color: $header-title-nav-font-color;
   font-size: $header-title-nav-font-size;
 }
 
-.header-title{
-@include flex-center;
+.header-title {
+  @include flex-center;
   padding: 1.2rem;
-  &__nav{
-    flex:1;
+
+  &__nav {
+    flex: 1;
   }
-  &__text{
+
+  &__text {
     font-size: 4.5rem;
     flex: 1;
     margin: 0 auto;
     text-align: center;
-    font-family: $site-title-ff,Arial,sans-serif;
+    font-family: $site-title-ff, Arial, sans-serif;
   }
 }
-.nav{
-  &__burger{
+
+.nav {
+  &__burger {
     display: none;
   }
-  &__menu{
+
+  &__menu {
     display: flex;
     align-items: center;
   }
-  &__item{
+
+  &__item {
     padding: 1rem;
     padding-right: 0;
     font-family: "PlayfairDisplay Regular", serif;
+
+    a:active,
+    a:hover {
+      color: rgba(169, 168, 165, 0.94);
+    }
   }
 }
 
 //Social icons and Dropdown menu
 .social {
-  @include  flex-j-fe;
+  @include flex-j-fe;
   flex: 1;
   align-items: center;
   position: relative;
+
   &__icons {
     display: flex;
     margin-right: 1rem;
   }
+
   a {
     padding: 0.4rem;
 
   }
+
   .dropdown {
     padding: $dropdown-padding;
     margin: 0 1rem 0 1.2rem;
@@ -57,12 +69,14 @@
     color: $white;
     cursor: pointer;
     font-size: $dropdown-fontsize;
-    font-family: "Lato Bold", Arial,sans-serif;
+    font-family: "Lato Bold", Arial, sans-serif;
+
     &__title {
       width: 101px;
       text-align: center;
       position: relative;
       outline: none;
+
       &:before {
         content: "";
         position: absolute;
@@ -73,6 +87,7 @@
         background: url('../../assets/images/dropDownArrow.png') 95% 92% no-repeat;
       }
     }
+
     &__options {
       position: absolute;
       top: 100%;
@@ -85,31 +100,36 @@
       transform-origin: top;
       z-index: 7;
       color: inherit;
-      background-color: rgba(0, 0 , 0,  0.9);
+      background-color: rgba(0, 0, 0, 0.9);
       padding: $dropdown-options-padding;
-      box-shadow: 0 2px 2px 2px rgba(0, 0 , 0,  0.4);
+      box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.4);
     }
+
     &__option {
       position: relative;
+
       &::after {
         display: block;
         content: "";
         background-color: $white;
         height: 1px;
         width: 0%;
-        left:50%;
-        position:absolute;
+        left: 50%;
+        position: absolute;
         transition: width .3s ease-in-out;
-        transform:translateX(-50%);
-        }
-       &:hover::after {
-         width: 80%;
-        }
+        transform: translateX(-50%);
+      }
+
+      &:hover::after {
+        width: 80%;
+      }
     }
+
     &.opened {
       .dropdown__options {
         transform: scaleY(1);
       }
+
       .dropdown__title::before {
         transform: rotate(90deg);
         top: 2px;
@@ -117,8 +137,6 @@
     }
 
   }
-
-
 
 
 }
